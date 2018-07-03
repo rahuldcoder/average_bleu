@@ -1,0 +1,6 @@
+Filename:               Bleu  Score                             
+
+fusionInference  :     0.2456447114027686
+fusionTest:            0.18853153610792323                                        
+fusionTrain :          0.6692829583965283
+fusionVal:             0.2599063351611868

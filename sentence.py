@@ -11,16 +11,8 @@ def readfile(filename):
         
         lines =list()
         textlist = filehandle.readlines()
-        for line in textlist:
-            for word in line.split():
-                lines.append(word)
-        '''
-        for line in textlist:
-            lines.append(line.split())
-        
-        return lines
-        '''    
-        return lines
+         
+        return textlist
 def average_bleu(sen_bleu,num_of_sen):
     
     return (sum(sen_bleu)/num_of_sen)
@@ -49,12 +41,11 @@ def main():
        # print(sen_bleu[i] )
  
 
-  #  print( 'Average Sentence Bleu '+ str(average_bleu(sen_bleu,num_of_sen) ) ) 
+    print( average_bleu(sen_bleu,num_of_sen)  ) 
 
-    print('Corpus Bleu')
-    score = nltk.translate.bleu_score.corpus_bleu([[reference]],[system],smoothing_function=SmoothingFunction().method5) 
+  
 
-    print(score)  
+
 
 if __name__ == '__main__':
     main()
